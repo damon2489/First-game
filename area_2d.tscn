@@ -96,12 +96,13 @@ animations = [{
 }]
 
 [node name="coin" type="Area2D" unique_id=1924111168]
+collision_mask = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1337146329]
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"coin"
 autoplay = "coin"
-frame_progress = 0.82655555
+frame_progress = 0.046930477
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1942810889]
 script = ExtResource("2_dl81w")
