@@ -95,6 +95,9 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_iywne"]
+radius = 5.0
+
 [node name="coin" type="Area2D" unique_id=1924111168]
 collision_mask = 2
 
@@ -102,9 +105,10 @@ collision_mask = 2
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"coin"
 autoplay = "coin"
-frame_progress = 0.046930477
+frame_progress = 0.54188657
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1942810889]
+shape = SubResource("CircleShape2D_iywne")
 script = ExtResource("2_dl81w")
 
 [connection signal="body_entered" from="." to="CollisionShape2D" method="_on_coin_body_entered"]
