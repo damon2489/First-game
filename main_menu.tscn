@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://s5ew04awfjys"]
+
+[ext_resource type="FontFile" uid="uid://crmi4dklspoy6" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://bos0oqtgw824s" path="res://main_menu.gd" id="1_7vrkn"]
+
+[node name="Main Menu" type="Control" unique_id=1389185104]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=190947992]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.03529412, 0.03529412, 0.6039216)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=815070027]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.5
+offset_top = -114.5
+offset_right = 108.5
+offset_bottom = 114.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RestartButton" type="Button" parent="VBoxContainer" unique_id=1192785200]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.0627451, 1, 0.4627451, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 30
+text = "Restart"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=1439755619]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.85882354, 0.015686275, 0, 1)
+theme_override_fonts/font = ExtResource("1_06t4h")
+theme_override_font_sizes/font_size = 30
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

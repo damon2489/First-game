@@ -91,7 +91,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="slime" type="Node2D" unique_id=357774395]
@@ -100,3 +100,5 @@ animations = [{
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1800608058]
 sprite_frames = SubResource("SpriteFrames_gf172")
+frame = 10
+frame_progress = 0.103445046
